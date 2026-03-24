@@ -14,6 +14,10 @@ Onde:
 * $a$ representa o *bias* (viés) da rede.
 * $b$ representa o peso sináptico associado à entrada.
 
+De uma forma mais simples:
+Você tem uma "caixa preta" (um sistema). Quando você joga um sinal de onda nela (a entrada $x$), ela cospe uma onda um pouco diferente do outro lado (a saída $y$).Você desconfia que a regra matemática que essa caixa está usando para transformar o sinal é uma equação de reta super simples: $y = a + b * x$.
+O seu problema é: Você não sabe quais são os números $a$ e $b$.
+
 ## 📁 Estrutura de Arquivos
 
 O projeto requer os seguintes arquivos de dados organizados dentro de uma pasta chamada `dados/`:
