@@ -11,7 +11,8 @@ indices_treino <- sample(1:n_total, size = floor(0.7 * n_total))
 x_treino <- as.matrix(x_entrada[indices_treino, ])
 y_treino <- as.matrix(y_saida[indices_treino, ])
 
-x_teste <- as.matrix(x_entrada[-indices_treino, ])
+#Sinal de "-" -> pegue todas as linhas desta matriz, exceto as que eu já separei para o treino
+x_teste <- as.matrix(x_entrada[-indices_treino, ]) 
 y_teste <- as.matrix(y_saida[-indices_treino, ])
 t_teste <- as.matrix(t_amostra[-indices_treino, ])
 
@@ -80,7 +81,7 @@ y_previsto <- x_teste_bias %*% pesos
 par(mfrow=c(1,2)) # Divide a tela para 2 gráficos
 
 # Gráfico 1: Curva de Erro
-plot(resultado_ex1$evec, type = 'l', col = "blue", lwd = 2,
+plot(resultado$evec, type = 'l', col = "blue", lwd = 2,
      xlab = "Época", ylab = "Erro Quadrático", 
      main = "Convergência do Treinamento")
 
